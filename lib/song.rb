@@ -22,7 +22,6 @@ class Song
     artist_name, song_name = filename.chomp(".mp3").split(" - ")
     song = self.new(song_name)
     song.artist = Artist.find_or_create_by_name(artist_name)
-    binding.pry
     song.arist.add_song(song)
     song.save
     song
